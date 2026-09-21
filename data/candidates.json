@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Дмитрий",
+    "budget": 14000.0,
+    "district": "центр",
+    "smoking": false,
+    "age": 24
+  },
+  {
+    "id": 2,
+    "name": "Сергей",
+    "budget": 10000.0,
+    "district": "спартак",
+    "smoking": true,
+    "age": 30
+  },
+  {
+    "id": 3,
+    "name": "Анна",
+    "budget": 16000.0,
+    "district": "центр",
+    "smoking": false,
+    "age": 21
+  }
+]
