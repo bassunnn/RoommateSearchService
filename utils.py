@@ -1,35 +1,27 @@
-"""Модуль безопасного ввода данных от пользователя."""
+"""Модуль безопасного ввода данных."""
 
 from typing import Optional
 
 
-def input_float(prompt: str, default: Optional[float] = None) -> float:
-    """Запрашивает число с плавающей точкой, обрабатывая ошибки ввода."""
-    while True:
-        val = input(prompt).strip()
-        if not val and default is not None:
-            return default
-        try:
-            return float(val)
-        except ValueError:
-            print("Ошибка: введите корректное число.")
-
-
 def input_int(prompt: str, default: Optional[int] = None) -> int:
-    """Запрашивает целое число, обрабатывая ошибки ввода."""
+    """Запрашивает целое число с обработкой ошибок."""
     while True:
-        val = input(prompt).strip()
-        if not val and default is not None:
+        raw = input(prompt).strip()
+        if not raw and default is not None:
             return default
         try:
-            return int(val)
+            return int(raw)
         except ValueError:
             print("Ошибка: введите целое число.")
 
 
-def input_bool(prompt: str, default: bool = False) -> bool:
-    """Запрашивает логическое значение (да/нет)."""
-    val = input(prompt).strip().lower()
-    if not val:
-        return default
-    return val in ["да", "yes", "y", "true", "1"]
+def input_float(prompt: str, default: Optional[float] = None) -> float:
+    """Запрашивает вещественное число с обработкой ошибок."""
+    while True:
+        raw = input(prompt).strip()
+        if not raw and default is not None:
+            return default
+        try:
+            return float(raw)
+        except ValueError:
+            print("Ошибка: введите корректное число.")
